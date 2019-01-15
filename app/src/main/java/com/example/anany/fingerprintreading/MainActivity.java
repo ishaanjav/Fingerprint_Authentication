@@ -1,8 +1,9 @@
 package com.example.anany.fingerprintreading;
 
 import android.Manifest;
-import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.KeyguardManager;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
@@ -12,10 +13,13 @@ import android.security.keystore.KeyProperties;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
@@ -32,6 +36,7 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String KEY_NAME = "yourKey";
@@ -42,11 +47,13 @@ public class MainActivity extends AppCompatActivity {
     private FingerprintManager.CryptoObject cryptoObject;
     private FingerprintManager fingerprintManager;
     private KeyguardManager keyguardManager;
+    RelativeLayout relativeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        relativeLayout = findViewById(R.id.activity_main);
 
         // If you’ve set your app’s minSdkVersion to anything lower than 23, then you’ll need to verify that the device is running Marshmallow
         // or higher before executing any fingerprint-related code
@@ -93,9 +100,8 @@ public class MainActivity extends AppCompatActivity {
 
                     // Here, I’m referencing the FingerprintHandler class that we’ll create in the next section. This class will be responsible
                     // for starting the authentication process (via the startAuth method) and processing the authentication process events//
-                    FingerprintHandler helper = new FingerprintHandler(this);
+                    FingerprintHandler helper = new FingerprintHandler(this, relativeLayout);
                     helper.startAuth(fingerprintManager, cryptoObject);
-                    Toast.makeText(this, fingerprintManager.toString(), Toast.LENGTH_SHORT).show();
 
                     Button button = findViewById(R.id.button);
                     button.setOnClickListener(new View.OnClickListener() {
@@ -110,6 +116,36 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.info, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        if (id == R.id.info) {
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("About This App")
+                    .setMessage("This app is simply meant to serve as a demo and guide of how to do fingerprint authentication in Android. The content of this app can be applied for a variety of purposes such as allowing only authorized users to access certain features of an app or possibly serve as a verification system for visitors entering a house.")
+                    .setCancelable(true)
+                    .setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    }).show();
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private void generateKey() {

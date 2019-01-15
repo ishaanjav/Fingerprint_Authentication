@@ -5,7 +5,6 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".MainActivity">
 
     <TextView
@@ -13,6 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textSize="28sp"
+        android:id = "@+id/textview"
         android:layout_marginTop="10dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_centerHorizontal="true"/>
