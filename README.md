@@ -12,12 +12,14 @@ extensive GitHub projects, you can check out [this repository](https://github.co
 by using the Microsoft Face API.*
 
 ____
+<img align="left" src="https://github.com/ishaanjav/Fingerprint_Authentication/blob/master/Animated%20Example.gif" width="290" height="55"->
+
 ## Usage
 The app consists of a single button which is only used to reset the app once the person has been identified by placing their fingerprint on the sensor. If the fingerprint cannot be identified by the device, then the app displays a message stating that `"Authentication Failed"`. Otherwise, the app will display a message of success and the user can press the `"Reset"` button to restart the process.
 
 **Please note that in order to test this app, your device must:**
-- **have a fingerprint reader.**
-- **have a fingerprint(s) already registered through the device's settings.**
+  - **have a fingerprint reader.**
+  - **have a fingerprint(s) already registered through the device's settings.**
 
 Once these requirements have been met, the app can use the `FingerprintManager` and `KeyguardManager` classes to match a fingerprint agaist the existing fingerprints on the device.
 
