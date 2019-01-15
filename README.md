@@ -25,7 +25,7 @@ The app consists of a single button which is only used to reset the app once the
 Once these requirements have been met, the app can use the `FingerprintManager` and `KeyguardManager` classes to match a fingerprint agaist the existing fingerprints on the device. Feel free to make any modifications to the app once you have cloned it or use the code for  other apps.
 
 ## Other Repositories
-While this is one of my simpler, demo Android apps, I do have some other repositories that serve more useful purposes and make use of APIs like the [Microsoft Face API](https://azure.microsoft.com/en-us/services/cognitive-services/face/), [Kairos API](https://www.kairos.com/docs/), [Google Maps SDK](https://developers.google.com/maps/documentation/android-sdk/intro) and more. Below is a list of those repositories:
+While this is one of my simpler, demo Android apps, I do have some other repositories that serve more useful purposes and make use of APIs like the [Microsoft Face API](https://azure.microsoft.com/en-us/services/cognitive-services/face/), [Kairos API](https://www.kairos.com/docs/), [Google Maps SDK](https://developers.google.com/maps/documentation/android-sdk/intro) and more. Below is a list of some of those repositories:
 
 - [**Face Analyzer**](https://github.com/ishaanjav/Face_Analyzer): The purpose of this Android app is to utilize the Microsoft Face API to not only detect individual faces in an image, but also for each face provide information such as emotions, the estimated age, gender, and more. [README](https://github.com/ishaanjav/Face_Analyzer/blob/master/README.md)
 
