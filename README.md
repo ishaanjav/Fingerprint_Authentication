@@ -1,6 +1,6 @@
 <img align="right" src="https://github.com/ishaanjav/Fingerprint_Authentication/blob/master/Fingerprint%20App.png" width="270">
 
-# Fingerprint_Authentication
+# Fingerprint Authentication
 
 
 **This app is simply meant to serve as a demo and guide of how to do fingerprint authentication in Android using the device's fingerprint reader.** The content of this app can be applied for a variety of purposes such as:
