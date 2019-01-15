@@ -12,7 +12,8 @@ extensive GitHub projects, you can check out [this repository](https://github.co
 by using the Microsoft Face API.*
 
 ____
-<img align="left" src="https://github.com/ishaanjav/Fingerprint_Authentication/blob/master/Animated%20Example.gif" width="290" height="55"->
+
+<img align="left" src="https://github.com/ishaanjav/Fingerprint_Authentication/blob/master/Animated%20Example.gif" width="290" height = "550">
 
 ## Usage
 The app consists of a single button which is only used to reset the app once the person has been identified by placing their fingerprint on the sensor. If the fingerprint cannot be identified by the device, then the app displays a message stating that `"Authentication Failed"`. Otherwise, the app will display a message of success and the user can press the `"Reset"` button to restart the process.
@@ -21,6 +22,12 @@ The app consists of a single button which is only used to reset the app once the
   - **have a fingerprint reader.**
   - **have a fingerprint(s) already registered through the device's settings.**
 
-Once these requirements have been met, the app can use the `FingerprintManager` and `KeyguardManager` classes to match a fingerprint agaist the existing fingerprints on the device.
+Once these requirements have been met, the app can use the `FingerprintManager` and `KeyguardManager` classes to match a fingerprint agaist the existing fingerprints on the device. Feel free to make any modifications to the app once you have cloned it or use the code for  other apps.
+
+## Other Repositories
+While this is one of my simpler, demo Android apps, I do have some other repositories that serve more useful purposes and make use of APIs like the [Microsoft Face API](https://azure.microsoft.com/en-us/services/cognitive-services/face/), [Kairos API](https://www.kairos.com/docs/), [Google Maps SDK](https://developers.google.com/maps/documentation/android-sdk/intro) and more. Below is a list of those repositories:
+
+- [Face Analyzer](https://github.com/ishaanjav/Face_Analyzer): The purpose of this Android app is to utilize the Microsoft Face API to not only detect individual faces in an image, but also for each face provide information such as emotions, the estimated age, gender, and more.
+
 
 
