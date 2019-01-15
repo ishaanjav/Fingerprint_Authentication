@@ -1,4 +1,4 @@
-<img align="right" src="https://github.com/ishaanjav/Fingerprint_Authentication/blob/master/Fingerprint%20App.png" width="230">
+<img align="right" src="https://github.com/ishaanjav/Fingerprint_Authentication/blob/master/Fingerprint%20App.png" width="270">
 
 # Fingerprint_Authentication
 
