@@ -13,7 +13,7 @@ by using the Microsoft Face API.*
 
 ____
 
-<img align="left" src="https://github.com/ishaanjav/Fingerprint_Authentication/blob/master/Animated%20Example.gif" width="300" height = "605">
+<img align="left" src="https://github.com/ishaanjav/Fingerprint_Authentication/blob/master/Animated%20Example.gif" width="300" height = "598">
 
 ## Usage
 The app consists of a single button which is only used to reset the app once the person has been identified by placing their finger on the fingerprint reader. If the fingerprint cannot be identified by the device, then the app displays a message stating that `"Authentication Failed"`. Otherwise, the app will display a message of success and the user can press the `"Reset"` button to restart the process.
